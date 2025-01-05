@@ -21,11 +21,19 @@ const Navbar = ({ toggleTheme, theme }) => {
     <>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/reviews">All Reviews</NavLink>
-      {user && (
+      {user ? (
         <>
           <NavLink to="/addReview">Add Review</NavLink>
           <NavLink to="/myReviews">My Reviews</NavLink>
           <NavLink to="/myWatchlist">Game WatchList</NavLink>
+          <Link to="/" onClick={handleLogout}>
+            Logout
+          </Link>
+        </>
+      ) : (
+        <>
+          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/register">Register</NavLink>
         </>
       )}
     </>
@@ -91,7 +99,7 @@ const Navbar = ({ toggleTheme, theme }) => {
             )}
           </button>
 
-          {user ? (
+          {user && (
             <div className="flex gap-3 items-center">
               <div className="dropdown">
                 <div
@@ -113,27 +121,6 @@ const Navbar = ({ toggleTheme, theme }) => {
                   </div>
                 </div>
               </div>
-              <button
-                onClick={handleSignOut}
-                className="btn text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:from-red-600 hover:via-red-700 hover:to-red-800 px-4 py-2 rounded-lg shadow-md"
-              >
-                Logout
-              </button>
-            </div>
-          ) : (
-            <div className="flex gap-3">
-              <Link
-                to="/login"
-                className="btn text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 px-4 py-2 rounded-lg shadow-md font-semibold"
-              >
-                Login
-              </Link>
-              <Link
-                to="/register"
-                className="btn text-white bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:from-green-600 hover:via-green-700 hover:to-green-800 px-4 py-2 rounded-lg shadow-md font-semibold"
-              >
-                Register
-              </Link>
             </div>
           )}
         </div>
