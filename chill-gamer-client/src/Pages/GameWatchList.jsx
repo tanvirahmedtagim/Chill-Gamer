@@ -28,8 +28,8 @@ const GameWatchlist = () => {
   }, [user]);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-6">Your Watchlist</h1>
+    <div className="container mx-auto mt-20 py-8">
+      <h1 className="text-3xl font-bold mb-6">Your Watchlist</h1>
 
       {loading ? (
         <p className="text-center">

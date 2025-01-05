@@ -41,7 +41,7 @@ const ReviewsCard = ({ review }) => {
 
         <Link
           to={`/review/${_id}`}
-          className="inline-block mt-6 py-2 px-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transform transition-all duration-200 ease-in-out shadow-md hover:shadow-lg"
+          className="inline-block mt-6 py-2 px-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transform transition-all duration-200 ease-in-out shadow-md hover:shadow-lg"
         >
           Explore Details
         </Link>

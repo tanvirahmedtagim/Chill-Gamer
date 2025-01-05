@@ -25,16 +25,12 @@ const MainLayout = () => {
     <div
       className={`${
         isHomeRoute && theme === "dark"
-          ? "bg-gray-900 text-white"
-          : "bg-white text-gray-900"
+          ? "bg-gray-900 text-gray-100"
+          : "bg-gray-100 text-gray-900"
       } min-h-screen flex flex-col`}
     >
-      <div className="lg:w-11/12 lg:mx-auto w-full">
-        <Navbar
-          toggleTheme={toggleTheme}
-          theme={isHomeRoute ? theme : "light"} 
-        />
-      </div>
+      <Navbar toggleTheme={toggleTheme} theme={isHomeRoute ? theme : "light"} />
+
       <div className="w-11/12 mx-auto flex-1">
         <Outlet context={{ theme }} />
       </div>

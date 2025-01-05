@@ -7,6 +7,7 @@ const AllReviews = () => {
   const [sortField, setSortField] = useState("");
   const [sortOrder, setSortOrder] = useState("");
   const [loading, setLoading] = useState(true);
+  const [visibleReviews, setVisibleReviews] = useState(8); // Start with 8 visible reviews
 
   const fetchReviews = async () => {
     setLoading(true);
@@ -32,12 +33,20 @@ const AllReviews = () => {
     }
   };
 
+  const handleViewMore = () => {
+    setVisibleReviews((prev) => prev + 8); // Increase visible reviews by 8
+  };
+
+  const handleViewLess = () => {
+    setVisibleReviews(8); // Reset to the initial 8 reviews
+  };
+
   useEffect(() => {
     fetchReviews();
   }, [genre, sortField, sortOrder]);
 
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="my-20">
       <div className="flex flex-col md:flex-row md:justify-between md:items-center my-4 gap-4">
         <div className="w-full md:w-auto">
           <select
@@ -86,11 +95,33 @@ const AllReviews = () => {
           <p className="text-gray-600">No reviews found.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {reviews.map((review) => (
-            <ReviewsCard key={review._id} review={review} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {reviews.slice(0, visibleReviews).map((review) => (
+              <ReviewsCard key={review._id} review={review} />
+            ))}
+          </div>
+
+          {visibleReviews < reviews.length ? (
+            <div className="text-center mt-6">
+              <button
+                onClick={handleViewMore}
+                className="btn bg-orange-600 text-white hover:bg-orange-700"
+              >
+                View More
+              </button>
+            </div>
+          ) : (
+            <div className="text-center mt-6">
+              <button
+                onClick={handleViewLess}
+                className="btn bg-gray-600 text-white hover:bg-gray-700"
+              >
+                View Less
+              </button>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

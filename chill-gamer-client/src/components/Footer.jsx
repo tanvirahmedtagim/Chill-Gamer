@@ -6,7 +6,7 @@ import logo from "../assets/logo.png";
 const Footer = ({ theme }) => {
   return (
     <footer
-      className={`sticky mt-6 top-[100vh] ${
+      className={`sticky  top-[100vh] ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-200 text-black"
       }`}
     >

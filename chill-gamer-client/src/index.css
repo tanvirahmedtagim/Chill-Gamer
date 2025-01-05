@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .active {
-  color: red;
-  border: 2px solid red;
+  color: orange;
+  border: 2px solid orange;
   padding: 1px 4px;
-  background-color: rgba(255, 0, 0, 0.142);
+  background-color: rgba(80, 54, 6, 0.718);
   border-radius: 4px;
 }
 * {

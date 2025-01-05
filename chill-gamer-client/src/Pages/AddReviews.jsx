@@ -55,7 +55,7 @@ const AddReviews = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-gradient-to-r from-indigo-100 to-indigo-50 shadow-xl rounded-lg">
+    <div className="max-w-4xl mx-auto p-8 my-[67px] bg-gradient-to-r from-indigo-100 to-indigo-50 shadow-xl rounded-lg">
       <h1 className="text-3xl font-extrabold text-gray-800 mb-6 text-center">
         Add New Review
       </h1>
@@ -191,7 +191,7 @@ const AddReviews = () => {
         <div>
           <button
             type="submit"
-            className="w-full px-6 py-3 mt-6 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300"
+            className="w-full px-6 py-3 mt-6 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 transition duration-300"
           >
             Submit Review
           </button>

@@ -8,11 +8,11 @@ import { MdDelete } from "react-icons/md";
 const MyReviews = () => {
   const { user } = useContext(AuthContext);
   const [myReviews, setMyReviews] = useState([]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (user?.email) {
-      setLoading(true); 
+      setLoading(true);
       fetch(
         `https://chill-gamer-server-nine.vercel.app/myReviews?email=${encodeURIComponent(
           user.email
@@ -23,7 +23,7 @@ const MyReviews = () => {
           setMyReviews(data);
         })
         .finally(() => {
-          setLoading(false); 
+          setLoading(false);
         });
     }
   }, [user?.email]);
@@ -61,8 +61,8 @@ const MyReviews = () => {
   };
 
   return (
-    <div className="my-reviews-container p-4 sm:p-6">
-      <h1 className="text-xl text-center sm:text-2xl font-bold text-gray-800 mb-4">
+    <div className="my-reviews-container mt-20 py-4 sm:py-6">
+      <h1 className="text-xl text-center md:text-3xl font-bold text-gray-800 mb-4">
         My Reviews
       </h1>
 

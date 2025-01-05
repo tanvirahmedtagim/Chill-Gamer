@@ -72,21 +72,29 @@ const LeaderBoard = ({ theme }) => {
 
   return (
     <section
-      className={`md:mt-20 md:pb-20 mt-8 pb-8 ${
-        theme === "dark" ? "bg-gray-900" : "bg-white"
+      className={`md:mt-20  mt-8  ${
+        theme === "light" ? "bg-gray-100" : "bg-gray-900"
       }`}
     >
-      <h2 className="text-4xl font-extrabold mb-6 text-center text-gradient bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-500">
+      <h2 className="text-4xl font-extrabold mb-6 text-center text-gradient bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-600">
         Leaderboard
       </h2>
-      <p className="md:text-xl font-medium mb-8 text-center lg:w-2/3 md:3/4 mx-auto text-gray-600">
+      <p
+        className={`md:text-lg mb-6 text-center lg:w-2/3 md:3/4 mx-auto  ${
+          theme === "light" ? "text-gray-700" : "bg-gray-900"
+        }`}
+      >
         Celebrate the top contributors on our platform. Check out the most
         helpful reviews, most liked content, and most active users. Join the fun
         and earn rewards!
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-        <div className="col-span-1 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <div
+          className={`col-span-1 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl ${
+            theme === "light" ? "bg-gray-700" : "bg-gray-700"
+          } text-white`}
+        >
           <h3 className="text-2xl font-semibold mb-6 text-center">
             Most Helpful Reviews
           </h3>
@@ -97,7 +105,6 @@ const LeaderBoard = ({ theme }) => {
                 className="flex items-center mb-6 hover:bg-opacity-90 transition duration-300"
               >
                 <div className="w-14 h-14 rounded-full border-4 border-white mr-4 transition-transform transform hover:scale-110">
-                  {" "}
                   <img
                     src={entry.avatar}
                     alt={entry.user}
@@ -105,11 +112,11 @@ const LeaderBoard = ({ theme }) => {
                   />
                 </div>
                 <div>
-                  <p className="font-bold text-lg text-yellow-300">
+                  <p className="font-bold text-lg text-orange-400">
                     {entry.user}
                   </p>
                   <p className="text-sm italic text-gray-300">{entry.review}</p>
-                  <p className="text-lg text-yellow-400 mt-2">
+                  <p className="text-lg text-orange-500 mt-2">
                     Likes: {entry.likes}
                   </p>
                 </div>
@@ -119,7 +126,11 @@ const LeaderBoard = ({ theme }) => {
         </div>
 
         {/* Most Liked Reviews */}
-        <div className="col-span-1 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <div
+          className={`col-span-1 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl ${
+            theme === "light" ? "bg-gray-700" : "bg-gray-700"
+          } text-white`}
+        >
           <h3 className="text-2xl font-semibold mb-6 text-center">
             Most Liked Reviews
           </h3>
@@ -135,11 +146,11 @@ const LeaderBoard = ({ theme }) => {
                   className="w-14 h-14 rounded-full border-4 border-white mr-4 transition-transform transform hover:scale-110"
                 />
                 <div>
-                  <p className="font-bold text-lg text-yellow-300">
+                  <p className="font-bold text-lg text-orange-400">
                     {entry.user}
                   </p>
                   <p className="text-sm italic text-gray-300">{entry.review}</p>
-                  <p className="text-lg text-yellow-400 mt-2">
+                  <p className="text-lg text-orange-500 mt-2">
                     Likes: {entry.likes}
                   </p>
                 </div>
@@ -149,7 +160,11 @@ const LeaderBoard = ({ theme }) => {
         </div>
 
         {/* Most Active Users */}
-        <div className="col-span-1 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <div
+          className={`col-span-1 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl ${
+            theme === "light" ? "bg-gray-700" : "bg-gray-700"
+          } text-white`}
+        >
           <h3 className="text-2xl font-semibold mb-6 text-center">
             Most Active Users
           </h3>
@@ -165,7 +180,7 @@ const LeaderBoard = ({ theme }) => {
                   className="w-14 h-14 rounded-full border-4 border-white mr-4 transition-transform transform hover:scale-110"
                 />
                 <div>
-                  <p className="font-bold text-lg text-yellow-300">
+                  <p className="font-bold text-lg text-orange-400">
                     {entry.user}
                   </p>
                   <p className="text-sm text-gray-300">

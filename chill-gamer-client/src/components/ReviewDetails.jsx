@@ -55,8 +55,8 @@ const ReviewDetails = () => {
   };
 
   return (
-    <div className="lg:w-11/12 mx-auto md:my-12 my-8">
-      <div className="card lg:card-side bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-xl rounded-lg overflow-hidden">
+    <div className="w-full md:my-[66px] my-8">
+      <div className="card lg:card-side bg-gradient-to-r from-[#ff6700] to-[#999595] text-white shadow-xl rounded-lg overflow-hidden">
         <figure className="w-full lg:w-1/2">
           <img
             src={gameCover}
@@ -68,7 +68,7 @@ const ReviewDetails = () => {
           <h2 className="card-title text-2xl lg:text-3xl font-semibold mb-2">
             {gameTitle}
           </h2>
-          <p className="text-base lg:text-lg text-gray-300 mb-4">
+          <p className="text-base lg:text-lg text-gray-900 mb-4">
             {description}
           </p>
           <div className="flex flex-col md:flex-row items-start lg:items-center justify-between mb-4">
@@ -79,9 +79,9 @@ const ReviewDetails = () => {
               Rating: {rating}/5
             </span>
           </div>
-          <div className="text-xl text-gray-200 mb-4 flex md:flex-row flex-col justify-between">
+          <div className="text-xl text-gray-900 mb-4 flex md:flex-row flex-col justify-between">
             <p>
-              <span className=" font-semibold">Reviewed by:</span> {name}
+              <span className="font-semibold">Reviewed by:</span> {name}
             </p>
             <p>
               <span className="font-semibold">Email:</span> {email}
@@ -89,7 +89,7 @@ const ReviewDetails = () => {
           </div>
           <div className="card-actions justify-end">
             <button
-              className="btn btn-block  px-6 py-3 text-lg font-semibold rounded-lg hover:bg-green-600 transition-colors mb-4 lg:mb-0"
+              className="btn btn-block px-6 py-3 text-lg font-semibold rounded-lg bg-[#ff6700] hover:bg-[#cc5200] transition-colors mb-4 lg:mb-0"
               onClick={handleAddToWatchList}
             >
               Add to WatchList

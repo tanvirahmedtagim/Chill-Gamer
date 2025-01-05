@@ -66,7 +66,7 @@ const UpdateReview = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-gradient-to-r from-indigo-100 to-indigo-50 shadow-xl rounded-lg">
+    <div className="max-w-4xl my-[67px] mx-auto p-8 bg-gradient-to-r from-indigo-100 to-indigo-50 shadow-xl rounded-lg">
       <h1 className="text-3xl font-extrabold text-gray-800 mb-6 text-center">
         Update Review
       </h1>
@@ -199,7 +199,7 @@ const UpdateReview = () => {
         <div>
           <button
             type="submit"
-            className="w-full px-6 py-3 mt-6 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+            className="w-full px-6 py-3 mt-6 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 transition duration-300"
           >
             Update Review
           </button>
