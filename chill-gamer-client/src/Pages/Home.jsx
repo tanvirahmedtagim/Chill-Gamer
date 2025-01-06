@@ -129,7 +129,7 @@ const Home = () => {
             Highlighting games that may have stumbled upon release but offer
             hidden gems of gameplay, storytelling, and cult appeal.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {lowestRated.map((game) => (
               <div
                 key={game._id}
