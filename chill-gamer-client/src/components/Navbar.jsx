@@ -19,21 +19,22 @@ const Navbar = ({ toggleTheme, theme }) => {
 
   const links = (
     <>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/reviews">All Reviews</NavLink>
+      <NavLink to="/">HOME</NavLink>
+      <NavLink to="/reviews">ALL REVIEWS</NavLink>
+      <NavLink to="/about">ABOUT US</NavLink>
       {user ? (
         <>
-          <NavLink to="/addReview">Add Review</NavLink>
-          <NavLink to="/myReviews">My Reviews</NavLink>
-          <NavLink to="/myWatchlist">Game WatchList</NavLink>
+          <NavLink to="/addReview">ADD REVIEW</NavLink>
+          <NavLink to="/myReviews">MY REVIEWS</NavLink>
+          <NavLink to="/myWatchlist">GAME WATCHLIST</NavLink>
           <Link to="/" onClick={handleLogout}>
-            Logout
+            LOGOUT
           </Link>
         </>
       ) : (
         <>
-          <NavLink to="/login">Login</NavLink>
-          <NavLink to="/register">Register</NavLink>
+          <NavLink to="/login">LOGIN</NavLink>
+          <NavLink to="/register">REGISTER</NavLink>
         </>
       )}
     </>

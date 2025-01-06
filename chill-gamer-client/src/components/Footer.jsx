@@ -80,12 +80,12 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a
-                href="#leaderboard"
+              <Link
+                to="/about"
                 className="hover:text-orange-500 transition-all duration-300"
               >
-                Leaderboard
-              </a>
+                About Us
+              </Link>
             </li>
           </ul>
         </div>
