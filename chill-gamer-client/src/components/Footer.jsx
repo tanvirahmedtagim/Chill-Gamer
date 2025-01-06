@@ -9,12 +9,17 @@ const Footer = () => {
       <footer className="grid md:grid-cols-2 bg-neutral text-neutral-content ">
         <div className="w-full mx-auto bg-[#1F2937] flex flex-col justify-center items-center py-8 lg:p-24 gap-4">
           <div className="flex flex-col items-center gap-6">
-            <div className="h-12">
-              <img
-                src={logo}
-                alt="Chill Gamer Logo"
-                className="h-full w-full"
-              />
+            <div className="flex items-center gap-2">
+              <div className="h-20">
+                <img
+                  src={logo}
+                  alt="Chill Gamer Logo"
+                  className="h-full w-full"
+                />
+              </div>
+              <div className="font-bold text-4xl">
+                <span className="text-orange-500">C</span>HILL <br /> GAMER
+              </div>
             </div>
             <p className="text-2xl mt-2 text-orange-500">
               A Game Review Application

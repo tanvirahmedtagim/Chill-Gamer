@@ -46,8 +46,8 @@ const Navbar = ({ toggleTheme, theme }) => {
       }`}
     >
       {" "}
-      <div className="navbar px-0">
-        <div className="navbar-start lg:w-[10%]">
+      <div className="navbar justify-between px-0">
+        <div className="navbar-start w-70% lg:w-[10%]">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -76,8 +76,18 @@ const Navbar = ({ toggleTheme, theme }) => {
               {links}
             </ul>
           </div>
-          <div className="lg:h-12 h-8">
-            <img className="w-full h-full object-cover" src={logo} alt="Logo" />
+          <div className="flex w-full gap-2 md:items-center">
+            {" "}
+            <div className="lg:h-12 md:h-10 h-8 ">
+              <img
+                className="w-full h-full object-cover"
+                src={logo}
+                alt="Logo"
+              />
+            </div>
+            <div className="font-bold md:block hidden">
+              <span className="text-orange-500">C</span>HILL GAMER
+            </div>
           </div>
         </div>
 
@@ -87,7 +97,7 @@ const Navbar = ({ toggleTheme, theme }) => {
           </ul>
         </div>
 
-        <div className="navbar-end flex gap-4 lg:w-[10%]">
+        <div className="navbar-end flex gap-4   w-[10%]">
           <button
             onClick={toggleTheme}
             className="text-xl p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800"
