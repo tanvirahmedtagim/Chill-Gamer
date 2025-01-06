@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <div className={`sticky  top-[100vh] `}>
+    <div className={`sticky  top-[100vh] md:mt-14 mt:8 `}>
       <footer className="grid md:grid-cols-2 bg-neutral text-neutral-content ">
         <div className="w-full mx-auto bg-[#1F2937] flex flex-col justify-center items-center py-8 lg:p-24 gap-4">
           <div className="flex flex-col items-center gap-6">

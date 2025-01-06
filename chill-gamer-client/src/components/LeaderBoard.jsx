@@ -72,7 +72,7 @@ const LeaderBoard = ({ theme }) => {
 
   return (
     <section id="leaderboard"
-      className={`md:mt-20  mt-8  ${
+      className={`md:mt-14  mt-8  ${
         theme === "light" ? "bg-gray-100" : "bg-gray-900"
       }`}
     >

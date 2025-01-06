@@ -3,6 +3,7 @@ import Carousel from "../components/Carousel";
 import { Link, useOutletContext } from "react-router-dom";
 import LeaderBoard from "../components/LeaderBoard";
 import { FaStar, FaCalendarAlt, FaGamepad } from "react-icons/fa";
+import ContactUs from "../components/ContactUs";
 
 const Home = () => {
   const { theme } = useOutletContext();
@@ -54,7 +55,7 @@ const Home = () => {
             for their exceptional design, storytelling, and immersive
             experiences.
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {reviews.slice(0, visibleReviews).map((review) => (
               <div
                 key={review._id}
@@ -120,7 +121,7 @@ const Home = () => {
         </section>
 
         {/* Lowest Rated Games Section */}
-        <section id="lowestRated" className="md:mt-20 mt-8">
+        <section id="lowestRated" className="md:mt- mt-8">
           <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center">
             Games That Flopped But Deserve a Second Look
           </h2>
@@ -128,7 +129,7 @@ const Home = () => {
             Highlighting games that may have stumbled upon release but offer
             hidden gems of gameplay, storytelling, and cult appeal.
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {lowestRated.map((game) => (
               <div
                 key={game._id}
@@ -173,6 +174,7 @@ const Home = () => {
         </section>
 
         <LeaderBoard theme={theme} />
+        <ContactUs theme={theme}></ContactUs>
       </div>
     </div>
   );
