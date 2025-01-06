@@ -43,7 +43,7 @@ const Navbar = ({ toggleTheme, theme }) => {
   return (
     <div
       className={` lg:px-[64.35px] md:px-8 px-3 fixed z-10 w-full ${
-        theme === "dark" ? "bg-gray-700 text-white" : "bg-gray-600 text-white"
+        theme === "dark" ? "bg-gray-700 text-white" : "bg-gray-700 text-white"
       }`}
     >
       {" "}
