@@ -5,7 +5,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
-import sideLogo from "../assets/error.jpg";
+import sideLogo from "../assets/login.jpg";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -65,17 +65,16 @@ const Login = () => {
   return (
     <div className="min-h-screen mt-[66px] w-full flex items-center justify-center  bg-gray-50">
       <div className="w-full max-w-4xl md:flex-row flex-col bg-white shadow-lg rounded-lg flex overflow-hidden">
-      
         {/* Left Side - Image */}
-        <div className="md:w-1/2 w-full  md:flex items-center justify-center bg-gray-100">
+        <div className="md:w-1/2 w-full mb-6 md:mb-0  md:flex items-center justify-center bg-gray-100">
           <img
             src={sideLogo}
             alt="Side Illustration"
-            className="w-full h-auto"
+            className="w-full h-full"
           />
         </div>
         <div className="w-full md:w-1/2 px-8 md:px-16">
-          <h1 className="text-3xl font-semibold text-center text-gray-800 mb-8">
+          <h1 className="text-3xl font-semibold text-center text-gray-800 md:mb-8">
             Login to Your Account
           </h1>
           <form onSubmit={handleSubmit} className="space-y-6">

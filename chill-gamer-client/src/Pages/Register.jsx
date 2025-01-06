@@ -6,7 +6,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
-import sideLogo from "../assets/error.jpg";
+import sideLogo from "../assets/login.jpg";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -74,11 +74,11 @@ const Register = () => {
         <div className="w-full max-w-4xl md:flex-row flex-col bg-white shadow-lg rounded-lg flex overflow-hidden">
           {" "}
           {/* Left Side - Image */}
-          <div className="md:w-1/2 w-full  md:flex items-center justify-center bg-gray-100">
+          <div className="md:w-1/2 w-full mb-6 md:mb-0  md:flex items-center justify-center bg-gray-100">
             <img
               src={sideLogo}
               alt="Side Illustration"
-              className="w-full h-auto"
+              className="w-full h-full"
             />
           </div>
           <div className="w-full md:w-1/2">
