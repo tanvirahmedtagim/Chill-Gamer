@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
 
@@ -7,6 +7,8 @@ const ReviewDetails = () => {
   const { id } = useParams();
   const singleReview = useLoaderData();
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const {
     gameCover,
     gameTitle,
@@ -19,6 +21,21 @@ const ReviewDetails = () => {
   } = singleReview || {};
 
   const handleAddToWatchList = () => {
+    if (!user) {
+      // Redirect to login if user is not logged in
+      Swal.fire({
+        title: "Unauthorized!",
+        text: "You need to log in to add items to your watchlist.",
+        icon: "warning",
+        confirmButtonText: "Login Now",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/login"); // Replace "/login" with your actual login route
+        }
+      });
+      return;
+    }
+
     const watchListItem = {
       gameCover,
       gameTitle,
