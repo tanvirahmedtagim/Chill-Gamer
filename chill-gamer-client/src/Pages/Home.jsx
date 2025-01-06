@@ -44,7 +44,7 @@ const Home = () => {
         <Carousel />
 
         {/* Highest Rated Games Section */}
-        <section className="md:mt-14 mt-8">
+        <section id="highestRated" className="md:mt-14 mt-8">
           <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center">
             Highest Rated Game
           </h2>
@@ -120,7 +120,7 @@ const Home = () => {
         </section>
 
         {/* Lowest Rated Games Section */}
-        <section className="md:mt-20 mt-8">
+        <section id="lowestRated" className="md:mt-20 mt-8">
           <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center">
             Games That Flopped But Deserve a Second Look
           </h2>
