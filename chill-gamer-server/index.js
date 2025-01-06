@@ -63,7 +63,7 @@ async function run() {
       const lowestRated = await reviewCollection
         .find()
         .sort({ rating: 1 })
-        .limit(3)
+        .limit(4)
         .toArray();
 
       res.send({
